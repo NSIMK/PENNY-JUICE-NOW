@@ -1,0 +1,248 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penny Juice Products</title>
+  <link rel="stylesheet" href="stylemenu.css" />
+  <script src="https://kit.fontawesome.com/6085d9783b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Lato:wght@400;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>   
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="menu.html" class="logo"><img src="pictureLogo.png" alt="Pennyjuice Logo" /></a>
+    <nav>
+      <a href="index.html" class="gaegu-regular"><b>HOME</b></a>
+      <a href="#" class="gaegu-regular"><b>ABOUT US</b></a>
+      <a href="menu.html" class="gaegu-regular"><b>PRODUCTS</b></a>
+      <a href="#" class="gaegu-regular"><b>DO'S & DON'TS</b></a>
+      <a href="#" class="gaegu-regular"><b>ENQUIRY</b></a>
+      <a href="#" style="color:yellow"><i class="fa-solid fa-cart-plus"></i></a>
+    </nav>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner-container">
+    <img src="pictureBanner.jpg" alt="Banner" style="width:100%;">
+    <h1 class="centered gaegu-regular"><b>HELLO! WELCOME TO PENNY JUICE</b></h1>
+  </div>
+  
+
+<!-- Products -->
+	 <div class="container">
+    <h1><span class="blue">OUR</span> <span class="orange">GOODS!</span></h1>
+
+    <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search" oninput="searchProducts()">
+</div>
+
+	
+
+    <div class="grid">
+    
+      <div class="card" onclick="openModal(this)"
+	        data-name="Strawberry Splash" 
+            data-price="RM15.40"
+			data-image="pictureJ1.png"
+			data-desc="Dive into the refreshing burst of Strawberry Splash,
+			a perfectly balanced blend of ripe strawberries and icy coolness that invigorates your senses and quenches your thirst."
+			data-sizes='[{"label":"1L","image":"pictureJ1.png"},{"label":"500ml","image":"pictureJ1.png"}]'>
+            <img src="pictureJ1.png" class="thumbnail" />        
+            <p class="product-name">STRAWBERRY SPLASH</p>
+      </div>
+      
+      <div class="card" onclick="openModal(this)"
+	        data-name="Carrot Punch" 
+            data-price="RM14.20"
+			data-image="pictureJ2.png"
+			data-desc="A rich and creamy Caribbean classic, Carrot Punch blends freshly grated carrots
+			with warm spices like cinnamon and nutmeg, sweetened with condensed milk for a smooth, indulgent texture."
+            data-sizes='[{"label":"1L","image":"pictureJ2.png"},{"label":"500ml","image":"pictureJ2.png"}]'>
+	        <img src="pictureJ2.png" class="thumbnail" />
+	        <p class="product-name">CARROT PUNCH</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	       data-name="Orange Splash" 
+            data-price="RM11.50"
+			data-image="pictureJ3.png"
+			data-desc="A vibrant and zesty blend of freshly squeezed oranges and tropical sweetness."
+            data-sizes='[{"label":"1L","image":"pictureJ3.png"},{"label":"500ml","image":"pictureJ3.png"}]'>
+	        <img src="pictureJ3.png" class="thumbnail" />
+		    <p class="product-name">ORANGE SPLASH</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	        data-name="Tropical Punch" 
+            data-price="RM15.40"
+			data-image="pictureJ4.png"
+			data-desc="A lively medley of exotic fruits like pineapple, mango, and passionfruit combined to create a sweet and tangy tropical sensation."
+            data-sizes='[{"label":"1L","image":"pictureJ4.png"},{"label":"500ml","image":"pictureJ4.png"}]'>
+	        <img src="pictureJ4.png" class="thumbnail" />
+		    <p class="product-name">TROPICAL PUNCH</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	       data-name="Apple Crush" 
+            data-price="RM13.40"
+			data-image="pictureJ5.png"
+			data-desc="A crisp and refreshing beverage made from freshly pressed apples, offering a perfect balance of sweet and tart flavors."
+            data-sizes='[{"label":"1L","image":"pictureJ5.png"},{"label":"500ml","image":"pictureJ5.png"}]'>
+	        <img src="pictureJ5.png" class="thumbnail" />
+		    <p class="product-name">APPLE CRUSH</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	       data-name="Lime Squeeze" 
+            data-price="RM10.50"
+			data-image="pictureJ6.png"
+			data-desc="A sharp and tangy lime-based drink delivering a burst of citrusy freshness. Perfect for those who enjoy a zesty, invigorating beverage with a clean, crisp finish."
+            data-sizes='[{"label":"1L","image":"pictureJ6.png"},{"label":"500ml","image":"pictureJ6.png"}]'>
+	        <img src="pictureJ6.png" class="thumbnail" />
+		    <p class="product-name">LIME SQUEEZE</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	       data-name="Berries" 
+            data-price="RM13.60"
+			data-image="pictureJ7.png"
+			data-desc="A luscious blend of mixed berries—strawberries, blueberries, raspberries—offering a sweet, slightly tart flavor profile."
+            data-sizes='[{"label":"1L","image":"pictureJ7.png"},{"label":"500ml","image":"pictureJ7.png"}]'>
+	        <img src="pictureJ7.png" class="thumbnail" />
+		    <p class="product-name">BERRIES</p>
+		</div>
+		
+      <div class="card" onclick="openModal(this)"
+	       data-name="Peach Drink" 
+            data-price="RM17.90"
+			data-image="pictureJ8.png"
+			data-desc="A smooth and sweet peach-flavored drink capturing the juicy essence of ripe peaches."
+            data-sizes='[{"label":"1L","image":"pictureJ8.png"},{"label":"500ml","image":"pictureJ8.png"}]'>
+	        <img src="pictureJ8.png" class="thumbnail" />
+		    <p class="product-name">PEACH DRINK</p>
+		</div>
+		
+	  <div class="card" onclick="openModal(this)"
+	        data-name="Mango Twist" 
+            data-price="RM10.40"
+			data-image="pictureJ9.png"
+ 			data-desc="A tropical delight featuring ripe mangoes blended into a creamy, sweet drink with a hint of citrus. "
+            data-sizes='[{"label":"1L","image":"pictureJ9.png"},{"label":"500ml","image":"pictureJ9.png"}]'>
+	        <img src="pictureJ9.png" class="thumbnail" />
+		    <p class="product-name">MANGO TWIST</p>
+		</div>
+
+    </div>
+
+  <!-- Modal Product Detail -->
+  <div id="productModal" class="modal" style="display:none;">
+  <div class="modal-content" style="position: relative;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-body">
+      <div class="modal-left">
+        <img id="modalImage" src="" alt="Product" />
+      </div>
+      <div class="modal-right">
+        <h2 id="modalName"></h2>
+		<p id="modalDesc" class="modal-desc"></p>
+        <p id="modalPrice" class="price-range"></p>
+        <h4>Available Size</h4>
+        <div class="size-options" id="sizeOptions"></div>
+        <div class="quantity-cart">
+          <div class="qty-box">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+          <button class="add-cart">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer lato-regular">
+    <div class="footer-content">
+      <p class="lato-regular">&copy; 2025 Penny Juice. It Makes Cents.</p>
+      <p class="lato-regular">The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.</p>
+    </div>
+  </footer>
+
+   <script>
+let currentQty = 1;
+function openModal(card) {
+  const name = card.getAttribute("data-name");
+  const price = card.getAttribute("data-price");
+  const image = card.getAttribute("data-image");
+  const desc = card.getAttribute("data-desc");
+  const sizes = JSON.parse(card.getAttribute("data-sizes"));
+
+  document.getElementById("modalName").innerText = name;
+  document.getElementById("modalDesc").innerText = desc || "";
+  document.getElementById("modalPrice").innerText = price;
+  document.getElementById("modalImage").src = image;
+
+
+  const sizeOptions = document.getElementById("sizeOptions");
+  sizeOptions.innerHTML = "";
+  sizes.forEach(s => {
+  sizeOptions.innerHTML += `
+    <div class="size-box" onclick="selectSize(this)" data-label="${s.label}">
+      <img src="${s.image}" alt="${s.label}">
+      <p>${s.label}</p>
+    </div>
+  `;
+});
+
+
+  currentQty = 1;
+  document.getElementById("qty").innerText = currentQty;
+
+  document.getElementById("productModal").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function selectSize(selectedBox) {
+  const sizeBoxes = document.querySelectorAll('.size-box');
+  
+  sizeBoxes.forEach(box => box.classList.remove('selected'));
+  
+  selectedBox.classList.add('selected');
+  
+  const selectedSize = selectedBox.getAttribute('data-label');
+  console.log('Selected size:', selectedSize);
+  
+}
+
+
+function closeModal() {
+  document.getElementById("productModal").style.display = "none";
+  document.body.style.overflow = "";
+}
+
+function changeQty(val) {
+  currentQty = Math.min(10, Math.max(1, currentQty + val));
+  document.getElementById("qty").innerText = currentQty;
+}
+
+function searchProducts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.getElementsByClassName("card");
+  for (let i = 0; i < cards.length; i++) {
+    const name = cards[i].getAttribute("data-name").toLowerCase();
+    cards[i].style.display = name.includes(input) ? "block" : "none";
+  }
+}
+</script>
+
+
+
+  
+
+</body>
+</html>
